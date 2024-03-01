@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@id/home"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/a"
+            android:text="Поддержка граждан"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/vertical_only" />
+
+        <TextView
+            android:id="@+id/vertical_only"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/a"
+            android:text="Для начала обработки вашей заявки вам необходимо нажать кнопку 'Получить выплату' после чего ожидать уведомление об окончании обработки вашей заявки."
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            app:layout_constraintBottom_toTopOf="@id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toTopOf="@id/start_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="00:00:00" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/start_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/btn"
+            android:fontFamily="@font/b"
+            android:padding="10dp"
+            android:text="Получить выплату"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/a"
+            android:text="Доступные выплаты"
+            android:textColor="#605F5F"
+            android:textSize="22sp"
+            app:layout_constraintTop_toBottomOf="@id/start_button" />
+
+        <TextView
+            android:id="@+id/decelerate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/b"
+            android:text="Подробнее про каждую категорию и условии выплат читайте на официальном сайте"
+            android:textColor="#858282"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/home" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
